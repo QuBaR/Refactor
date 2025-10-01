@@ -4,7 +4,7 @@ Detta är en uppgift i refactoring av befintlig kod. Följ stegen nedan för att ge
 
 ## Arbetsflöde
 
-1.  **Clona** repot .
+1.  **Clona** repot https://github.com/QuBaR/Refactor.
 2.  **Skapa branch:** `feature/<namn>-cleanup-<regel>` (ex: `feature/ali-cleanup-magic-strings`).
 3.  **Gör små, meningsfulla commits**.
 4.  **Skapa PR** mot `main`. Fyll i PR-mallen.
