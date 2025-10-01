@@ -16,14 +16,30 @@ namespace Refactor
             string x = "0";
             while (x != "3")
             {
-
-                Console.WriteLine("welcome");
-                Console.WriteLine("1) show sum of approved");
-                Console.WriteLine("2) filter by cust");
+                Console.WriteLine("");
+                Console.WriteLine("-------------------\nWelcome to the CRM\n-------------------\n");
+                Console.WriteLine("0) List customers");
+                Console.WriteLine("1) Show sum of approved orders");
+                Console.WriteLine("2) Filter by custumoer");
                 Console.WriteLine("3) exit");
                 x = Console.ReadLine();
+                Console.WriteLine("");
 
-                if (x == "1")
+                if (x == "0")
+                {
+                    if (list1 != null)
+                    {
+                        if (list1.Count > 0)
+                        {
+                            var d = list1.Select(z => z.cust).Distinct().ToList();
+                            for (int j = 0; j < d.Count; j++)
+                            {
+                                Console.WriteLine(d[j]);
+                            }
+                        }
+                    }
+                }
+                else if (x == "1")
                 {
                     if (list1 != null)
                     {
@@ -37,13 +53,13 @@ namespace Refactor
                                     s = s + i.amt;
                                 }
                             }
-                            Console.WriteLine("SUM=" + s);
+                            Console.WriteLine("Sum of approved order: " + s);
                         }
                     }
                 }
                 else if (x == "2")
                 {
-                    Console.WriteLine("enter cust");
+                    Console.WriteLine("Enter customer");
                     var c = Console.ReadLine();
                     var f = list1.Where(z => z.cust == c && z.sts == 1).ToList();
                     for (int j = 0; j < f.Count; j++)
