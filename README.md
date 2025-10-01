@@ -4,7 +4,7 @@ Detta är en uppgift i refactoring av befintlig kod. Följ stegen nedan för att ge
 
 ## Arbetsflöde
 
-1.  **Fork & clone** ditt repo.
+1.  **Clona** repot .
 2.  **Skapa branch:** `feature/<namn>-cleanup-<regel>` (ex: `feature/ali-cleanup-magic-strings`).
 3.  **Gör små, meningsfulla commits**.
 4.  **Skapa PR** mot `main`. Fyll i PR-mallen.
@@ -39,9 +39,6 @@ Detta är en uppgift i refactoring av befintlig kod. Följ stegen nedan för att ge
 ### Gör domänspråket tydligt
 -   Metoder som `CalculateApprovedTotal()`, `PrintApprovedOrdersForCustomer(string customerId)`.
 
-### Bonus
--   (Valfritt bonussteg: lägg till ett litet testprojekt och testa `CalculateApprovedTotal()`).
-
 ## Git-checkpoints (minimikrav: 6 meningsfulla commits)
 
 Exempel på commit-meddelanden:
@@ -51,13 +48,6 @@ Exempel på commit-meddelanden:
 -   `refactor: extract CalculateApprovedTotal()`
 -   `refactor: early returns to reduce nesting in menu handling`
 -   `style: apply .NET casing conventions (PascalCase/camelCase)`
--   `docs: update README with usage & reasoning`
-
-## Bedömning (IG/G/VG)
-
--   **IG:** Få eller inga förbättringar, bristfälligt Git-flöde, PR saknas/inkomplett.
--   **G:** Minst 4 tydliga förbättringar, 6+ fokuserade commits, PR-mall ifylld, koden bygger och är uppdaterad mot `main`.
--   **VG:** Samtliga förbättringsområden adresserade väl, utmärkt commit-historik och PR-motivering, ev. små tester/dokumentation/extra förbättringar.
 
 ## Snabb “self-review” i PR (eleven bockar av)
 
