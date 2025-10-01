@@ -6,14 +6,11 @@ Detta är en uppgift i refactoring av befintlig kod. Följ stegen nedan för att ge
 
 1.  **Fork & clone** ditt repo.
 2.  **Skapa branch:** `feature/<namn>-cleanup-<regel>` (ex: `feature/ali-cleanup-magic-strings`).
-3.  **Gör små, meningsfulla commits** (minst 6).
+3.  **Gör små, meningsfulla commits**.
 4.  **Skapa PR** mot `main`. Fyll i PR-mallen.
 5.  **Fixa ev. konflikter**, säkerställ att koden bygger och att PR är up to date.
 6.  **Merge** när review är godkänd.
 
-## Förbättringspass (kopplat till dina punkter)
-
-Eleven väljer minst fyra områden (gärna fler) och gör en commit per område:
 
 ### Namngivning & vokabulär
 -   Byt `list1` ? `orders`, `sts` ? `Status`, `amt` ? `Amount`, `cust` ? `CustomerId`.
@@ -64,8 +61,17 @@ Exempel på commit-meddelanden:
 
 ## Snabb “self-review” i PR (eleven bockar av)
 
--   [ ] **Namn:** tydliga, uttalbara, sökbara, samma vokabulär
--   [ ] **Magic strings/numbers** borttagna (enum/const)
--   [ ] **Mindre nästling**, “return early”
--   [ ] **Konsekvent** `PascalCase`/`camelCase`, ingen Hungarian
--   [ ] **README** beskriver vad och varför
+### Sammanfattning
+Vad har du ändrat och varför?
+
+### Checklista
+- [ ] Små, fokuserade commits med tydliga meddelanden
+- [ ] Namn är tydliga/uttalbara/sökbara
+- [ ] Magic strings/nums borttagna (konstanter/enum)
+- [ ] Djup nästling minskad, return early använt
+- [ ] Samma vokabulär för samma sak (customer/order)
+- [ ] Inga Hungarian prefix, konsekvent casing (.NET)
+- [ ] README uppdaterad vid behov
+
+### Risker/side-effects
+Finns beteendeförändring? Hur testade du?

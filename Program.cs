@@ -4,11 +4,11 @@ namespace Refactor
 {
     class Program
     {
-        static List<Order> list1 = new List<Order>
+        static List<Objekt> list1 = new List<Objekt>
         {
-            new Order { id=1, sts=1, amt=99.99m, cust="A" },
-            new Order { id=2, sts=0, amt=49.50m, cust="B" },
-            new Order { id=3, sts=1, amt=10m,   cust="B" }
+            new Objekt { id=1, sts=1, amt=99.99m, cust="A" },
+            new Objekt { id=2, sts=0, amt=49.50m, cust="B" },
+            new Objekt { id=3, sts=1, amt=10m,   cust="B" }
         };
 
         static void Main(string[] args)
