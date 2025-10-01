@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Include=".github\PULL_REQUEST_TEMPLATE.md" />
+    <None Include=".github\workflows\dotnet.yml" />
   </ItemGroup>
 
 </Project>

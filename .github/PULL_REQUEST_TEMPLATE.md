@@ -8,7 +8,6 @@ Vad har du ändrat och varför?
 - [ ] Djup nästling minskad, return early använt
 - [ ] Samma vokabulär för samma sak (customer/order)
 - [ ] Inga Hungarian prefix, konsekvent casing (.NET)
-- [ ] README uppdaterad vid behov
 
 ## Risker/side-effects
 Finns beteendeförändring? Hur testade du?
