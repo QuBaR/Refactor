@@ -14,8 +14,8 @@ namespace Refactor
         static void Main(string[] args)
         {
             string choice = "";
-            bool isActive = true;
-            while (isActive == true)
+            bool ProgramIsOn = true;
+            while (ProgramIsOn == true)
             {
                 Console.WriteLine("");
                 Console.WriteLine("-------------------\nWelcome to the CRM\n-------------------\n");
@@ -74,7 +74,7 @@ namespace Refactor
 
                     case "4":
                         Console.WriteLine("Tack för att du använde programet");
-                        isActive = false;
+                        ProgramIsOn = false;
                         break;
 
                     default:
