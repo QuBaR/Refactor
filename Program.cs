@@ -32,9 +32,9 @@ namespace Refactor
                             if (customers.Count > 0)
                             {
                                 var d = customers.Select(z => z.Name).Distinct().ToList();
-                                for (int j = 0; j < d.Count; j++)
+                                for (int i = 0; i < d.Count; i++)
                                 {
-                                    Console.WriteLine(d[j]);
+                                    Console.WriteLine(d[i]);
                                 }
                             }
                         break;
@@ -58,9 +58,9 @@ namespace Refactor
                         Console.WriteLine("Enter customer");
                         var c = Console.ReadLine()?.ToLower() ?? string.Empty;
                         var f = customers.Where(z => z.Name.ToLower() == c && z.Approved == true).ToList();
-                        for (int j = 0; j < f.Count; j++)
+                        for (int i = 0; i < f.Count; i++)
                         {
-                            Console.WriteLine("ID: " + f[j].Id + " Amount: " + f[j].Amount);
+                            Console.WriteLine("ID: " + f[i].Id + " Amount: " + f[i].Amount);
                         }
                         break;
                     case "4":
