@@ -46,6 +46,7 @@ namespace Refactor
                         break;
 
                     case "2":
+                            if (customers.Count > 0)
 
 
                         if (customers.Count > 0)
@@ -63,6 +64,7 @@ namespace Refactor
                                 }
                                 Console.WriteLine("Sum of approved order: " + sum);
                             }
+                            }
                             Console.WriteLine("Sum of approved order: " + s);
                         }
 
@@ -76,14 +78,12 @@ namespace Refactor
                             Console.WriteLine("ID: " + f[j].Id + " Amount: " + f[j].Amount);
                         }
                         break;
-
                     case "4":
                         Console.WriteLine("Thank you for choosing this program");
                         ProgramIsOn = false;
                         break;
-
                     default:
-                        Console.WriteLine("Ogiltigt val, försök igen");
+                        Console.WriteLine("Wrong choice, try again");
                         break;
                 }
             }
