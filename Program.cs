@@ -6,9 +6,9 @@ namespace Refactor
     {
         static List<Customers> customers = new List<Customers>
         {
-            new Customers { id=1, sts=1, amt=99.99m, cust="A" },
-            new Customers { id=2, sts=0, amt=49.50m, cust="B" },
-            new Customers { id=3, sts=1, amt=10m,   cust="B" }
+            new Customers { Id=1, Approved=true, Amount=99.99m, Name="Edvin" },
+            new Customers { Id=2, Approved=false, Amount=49.50m, Name="Nicolina" },
+            new Customers { Id=3, Approved=true, Amount=10m, Name="Felix" }
         };
 
         static void Main(string[] args)
@@ -31,15 +31,17 @@ namespace Refactor
                     case "1":
                         if (customers != null)
                         {
+
                             if (customers.Count > 0)
                             {
-                                var d = customers.Select(z => z.cust).Distinct().ToList();
+                                var d = customers.Select(z => z.Name).Distinct().ToList();
                                 for (int j = 0; j < d.Count; j++)
                                 {
                                     Console.WriteLine(d[j]);
                                 }
                             }
                         }
+
                         break;
 
                     case "2":
@@ -50,9 +52,9 @@ namespace Refactor
                                 decimal s = 0;
                                 foreach (var i in customers)
                                 {
-                                    if (i.sts == 1) // 1 = approved
+                                    if (i.Approved)
                                     {
-                                        s = s + i.amt;
+                                        s = s + i.Amount;
                                     }
                                 }
                                 Console.WriteLine("Sum of approved order: " + s);
@@ -63,10 +65,10 @@ namespace Refactor
                     case "3":
                         Console.WriteLine("Enter customer");
                         var c = Console.ReadLine();
-                        var f = customers.Where(z => z.cust == c && z.sts == 1).ToList();
+                        var f = customers.Where(z => z.Name == c && z.Approved).ToList();
                         for (int j = 0; j < f.Count; j++)
                         {
-                            Console.WriteLine("ID: " + f[j].id + " AMT: " + f[j].amt);
+                            Console.WriteLine("ID: " + f[j].Id + " Amount: " + f[j].Amount);
                         }
                         break;
 
