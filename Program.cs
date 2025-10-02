@@ -25,55 +25,58 @@ namespace Refactor
                 x = Console.ReadLine();
                 Console.WriteLine("");
 
-                if (x == "0")
+                switch (x)
                 {
-                    if (customers != null)
-                    {
-                        if (customers.Count > 0)
+
+                    case "0":
+                        if (customers != null)
                         {
-                            var d = customers.Select(z => z.cust).Distinct().ToList();
-                            for (int j = 0; j < d.Count; j++)
+                            if (customers.Count > 0)
                             {
-                                Console.WriteLine(d[j]);
-                            }
-                        }
-                    }
-                }
-                else if (x == "1")
-                {
-                    if (customers != null)
-                    {
-                        if (customers.Count > 0)
-                        {
-                            decimal s = 0;
-                            foreach (var i in customers)
-                            {
-                                if (i.sts == 1) // 1 = approved
+                                var d = customers.Select(z => z.cust).Distinct().ToList();
+                                for (int j = 0; j < d.Count; j++)
                                 {
-                                    s = s + i.amt;
+                                    Console.WriteLine(d[j]);
                                 }
                             }
-                            Console.WriteLine("Sum of approved order: " + s);
                         }
-                    }
-                }
-                else if (x == "2")
-                {
-                    Console.WriteLine("Enter customer");
-                    var c = Console.ReadLine();
-                    var f = customers.Where(z => z.cust == c && z.sts == 1).ToList();
-                    for (int j = 0; j < f.Count; j++)
-                    {
-                        Console.WriteLine("ID: " + f[j].id + " AMT: " + f[j].amt);
-                    }
-                }
-                else if (x == "3")
-                {
-                    Console.WriteLine("bye");
-                }
-                else
-                {
-                    Console.WriteLine("err");
+                        break;
+
+                    case "1":
+                        if (customers != null)
+                        {
+                            if (customers.Count > 0)
+                            {
+                                decimal s = 0;
+                                foreach (var i in customers)
+                                {
+                                    if (i.sts == 1) // 1 = approved
+                                    {
+                                        s = s + i.amt;
+                                    }
+                                }
+                                Console.WriteLine("Sum of approved order: " + s);
+                            }
+                        }
+                        break;
+
+                    case "2":
+                        Console.WriteLine("Enter customer");
+                        var c = Console.ReadLine();
+                        var f = customers.Where(z => z.cust == c && z.sts == 1).ToList();
+                        for (int j = 0; j < f.Count; j++)
+                        {
+                            Console.WriteLine("ID: " + f[j].id + " AMT: " + f[j].amt);
+                        }
+                        break;
+
+                    case "3":
+                        Console.WriteLine("bye");
+                        break;
+
+                    default:
+                        Console.WriteLine("err");
+                        break;
                 }
             }
 
