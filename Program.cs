@@ -23,7 +23,7 @@ namespace Refactor
                 Console.WriteLine("3) Filter by customer");
                 Console.WriteLine("4) Exit");
                 choice = Console.ReadLine();
-                Console.WriteLine("");
+                Console.WriteLine();
 
                 switch (choice)
                 {
