@@ -2,9 +2,9 @@
 {
     public class Customers
     {
-        public int id { get; set; }
-        public int sts { get; set; }
-        public decimal amt { get; set; }
-        public string cust { get; set; }
+        public int Id { get; set; }
+        public int Status { get; set; }
+        public decimal Amount { get; set; }
+        public string Customer { get; set; }
     }
 }

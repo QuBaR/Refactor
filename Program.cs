@@ -6,9 +6,9 @@ namespace Refactor
     {
         static List<Customers> customers = new List<Customers>
         {
-            new Customers { id=1, sts=1, amt=99.99m, cust="A" },
-            new Customers { id=2, sts=0, amt=49.50m, cust="B" },
-            new Customers { id=3, sts=1, amt=10m,   cust="B" }
+            new Customers { Id=1, Status=1, Amount=99.99m, Name="A" },
+            new Customers { Id=2, Status=0, Amount=49.50m, Name="B" },
+            new Customers { Id=3, Status=1, Amount=10m, Name="B" }
         };
 
         static void Main(string[] args)
@@ -31,7 +31,7 @@ namespace Refactor
                     {
                         if (customers.Count > 0)
                         {
-                            var d = customers.Select(z => z.cust).Distinct().ToList();
+                            var d = customers.Select(z => z.Name).Distinct().ToList();
                             for (int j = 0; j < d.Count; j++)
                             {
                                 Console.WriteLine(d[j]);
@@ -48,9 +48,9 @@ namespace Refactor
                             decimal s = 0;
                             foreach (var i in customers)
                             {
-                                if (i.sts == 1) // 1 = approved
+                                if (i.Status == 1) // 1 = approved
                                 {
-                                    s = s + i.amt;
+                                    s = s + i.Amount;
                                 }
                             }
                             Console.WriteLine("Sum of approved order: " + s);
@@ -61,10 +61,10 @@ namespace Refactor
                 {
                     Console.WriteLine("Enter customer");
                     var c = Console.ReadLine();
-                    var f = customers.Where(z => z.cust == c && z.sts == 1).ToList();
+                    var f = customers.Where(z => z.Name == c && z.Status == 1).ToList();
                     for (int j = 0; j < f.Count; j++)
                     {
-                        Console.WriteLine("ID: " + f[j].id + " AMT: " + f[j].amt);
+                        Console.WriteLine("ID: " + f[j].Id + " Amount: " + f[j].Amount);
                     }
                 }
                 else if (x == "3")
