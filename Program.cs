@@ -73,11 +73,12 @@ namespace Refactor
                         break;
 
                     case "4":
-                        Console.WriteLine("bye");
+                        Console.WriteLine("Tack för att du använde programet");
+                           
                         break;
 
                     default:
-                        Console.WriteLine("err");
+                        Console.WriteLine("Ogiltigt val, försök igen");
                         break;
                 }
             }
