@@ -18,10 +18,10 @@ namespace Refactor
             {
                 Console.WriteLine("");
                 Console.WriteLine("-------------------\nWelcome to the CRM\n-------------------\n");
-                Console.WriteLine("0) List customers");
-                Console.WriteLine("1) Show sum of approved orders");
-                Console.WriteLine("2) Filter by customer");
-                Console.WriteLine("3) Exit");
+                Console.WriteLine("1) List customers");
+                Console.WriteLine("2) Show sum of approved orders");
+                Console.WriteLine("3) Filter by customer");
+                Console.WriteLine("4) Exit");
                 x = Console.ReadLine();
                 Console.WriteLine("");
 
