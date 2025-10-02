@@ -29,9 +29,6 @@ namespace Refactor
                 {
 
                     case "1":
-                        
-                     
-
                             if (customers.Count > 0)
                             {
                                 var d = customers.Select(z => z.Name).Distinct().ToList();
@@ -40,26 +37,21 @@ namespace Refactor
                                     Console.WriteLine(d[j]);
                                 }
                             }
-                        
-
                         break;
 
                     case "2":
-                        
-                        
                             if (customers.Count > 0)
                             {
-                                decimal s = 0;
+                                decimal sum = 0;
                                 foreach (var i in customers)
                                 {
                                     if (i.Approved)
                                     {
-                                        s = s + i.Amount;
+                                        sum = sum + i.Amount;
                                     }
                                 }
-                                Console.WriteLine("Sum of approved order: " + s);
+                                Console.WriteLine("Sum of approved order: " + sum);
                             }
-                        
                         break;
 
                     case "3":
@@ -71,14 +63,11 @@ namespace Refactor
                             Console.WriteLine("ID: " + f[j].Id + " Amount: " + f[j].Amount);
                         }
                         break;
-
                     case "4":
-                        Console.WriteLine("Tack för att du använde programet");
-                           
+                        Console.WriteLine("Thank you for choosing this program");
                         break;
-
                     default:
-                        Console.WriteLine("Ogiltigt val, försök igen");
+                        Console.WriteLine("Wrong choice, try again");
                         break;
                 }
             }
