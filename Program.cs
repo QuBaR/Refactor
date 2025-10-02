@@ -14,7 +14,8 @@ namespace Refactor
         static void Main(string[] args)
         {
             string choice = "";
-            while (choice != "4")
+            bool isActive = true;
+            while (isActive == true)
             {
                 Console.WriteLine("");
                 Console.WriteLine("-------------------\nWelcome to the CRM\n-------------------\n");
@@ -29,29 +30,29 @@ namespace Refactor
                 {
 
                     case "1":
-                            if (customers.Count > 0)
+                        if (customers.Count > 0)
+                        {
+                            var d = customers.Select(z => z.Name).Distinct().ToList();
+                            for (int i = 0; i < d.Count; i++)
                             {
-                                var d = customers.Select(z => z.Name).Distinct().ToList();
-                                for (int i = 0; i < d.Count; i++)
-                                {
-                                    Console.WriteLine(d[i]);
-                                }
+                                Console.WriteLine(d[i]);
                             }
+                        }
                         break;
 
                     case "2":
-                            if (customers.Count > 0)
+                        if (customers.Count > 0)
+                        {
+                            decimal sum = 0;
+                            foreach (var i in customers)
                             {
-                                decimal sum = 0;
-                                foreach (var i in customers)
+                                if (i.Approved)
                                 {
-                                    if (i.Approved)
-                                    {
-                                        sum = sum + i.Amount;
-                                    }
+                                    sum = sum + i.Amount;
                                 }
-                                Console.WriteLine("Sum of approved order: " + sum);
                             }
+                            Console.WriteLine("Sum of approved order: " + sum);
+                        }
                         break;
 
                     case "3":
@@ -65,6 +66,7 @@ namespace Refactor
                         break;
                     case "4":
                         Console.WriteLine("Thank you for choosing this program");
+                        isActive = false;
                         break;
                     default:
                         Console.WriteLine("Wrong choice, try again");
