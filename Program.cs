@@ -29,9 +29,6 @@ namespace Refactor
                 {
 
                     case "1":
-                        
-                     
-
                             if (customers.Count > 0)
                             {
                                 var d = customers.Select(z => z.Name).Distinct().ToList();
@@ -40,13 +37,9 @@ namespace Refactor
                                     Console.WriteLine(d[j]);
                                 }
                             }
-                        
-
                         break;
 
                     case "2":
-                        
-                        
                             if (customers.Count > 0)
                             {
                                 decimal sum = 0;
@@ -59,7 +52,6 @@ namespace Refactor
                                 }
                                 Console.WriteLine("Sum of approved order: " + sum);
                             }
-                        
                         break;
 
                     case "3":
@@ -70,12 +62,9 @@ namespace Refactor
                             Console.WriteLine("ID: " + f[j].Id + " Amount: " + f[j].Amount);
                         }
                         break;
-
                     case "4":
                         Console.WriteLine("Thank you for choosing this program");
-                           
                         break;
-
                     default:
                         Console.WriteLine("Wrong choice, try again");
                         break;
