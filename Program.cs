@@ -13,8 +13,8 @@ namespace Refactor
 
         static void Main(string[] args)
         {
-            string x = "0";
-            while (x != "3")
+            string choice = "";
+            while (choice != "3")
             {
                 Console.WriteLine("");
                 Console.WriteLine("-------------------\nWelcome to the CRM\n-------------------\n");
@@ -22,10 +22,10 @@ namespace Refactor
                 Console.WriteLine("2) Show sum of approved orders");
                 Console.WriteLine("3) Filter by customer");
                 Console.WriteLine("4) Exit");
-                x = Console.ReadLine();
+                choice = Console.ReadLine();
                 Console.WriteLine("");
 
-                switch (x)
+                switch (choice)
                 {
 
                     case "1":
