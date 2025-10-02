@@ -18,17 +18,17 @@ namespace Refactor
             {
                 Console.WriteLine("");
                 Console.WriteLine("-------------------\nWelcome to the CRM\n-------------------\n");
-                Console.WriteLine("0) List customers");
-                Console.WriteLine("1) Show sum of approved orders");
-                Console.WriteLine("2) Filter by customer");
-                Console.WriteLine("3) Exit");
+                Console.WriteLine("1) List customers");
+                Console.WriteLine("2) Show sum of approved orders");
+                Console.WriteLine("3) Filter by customer");
+                Console.WriteLine("4) Exit");
                 x = Console.ReadLine();
                 Console.WriteLine("");
 
                 switch (x)
                 {
 
-                    case "0":
+                    case "1":
                         if (customers != null)
                         {
 
@@ -44,7 +44,7 @@ namespace Refactor
 
                         break;
 
-                    case "1":
+                    case "2":
                         if (customers != null)
                         {
                             if (customers.Count > 0)
@@ -62,7 +62,7 @@ namespace Refactor
                         }
                         break;
 
-                    case "2":
+                    case "3":
                         Console.WriteLine("Enter customer");
                         var c = Console.ReadLine();
                         var f = customers.Where(z => z.Name == c && z.Approved).ToList();
@@ -72,7 +72,7 @@ namespace Refactor
                         }
                         break;
 
-                    case "3":
+                    case "4":
                         Console.WriteLine("bye");
                         break;
 
