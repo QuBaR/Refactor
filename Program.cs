@@ -6,9 +6,9 @@ namespace Refactor
     {
         static List<Customers> customers = new List<Customers>
         {
-            new Customers { Id=1, Approved=true, Amount=99.99m, Name="A" },
-            new Customers { Id=2, Approved=false, Amount=49.50m, Name="B" },
-            new Customers { Id=3, Approved=true, Amount=10m, Name="B" }
+            new Customers { Id=1, Approved=true, Amount=99.99m, Name="Edvin" },
+            new Customers { Id=2, Approved=false, Amount=49.50m, Name="Nicolina" },
+            new Customers { Id=3, Approved=true, Amount=10m, Name="Felix" }
         };
 
         static void Main(string[] args)
@@ -68,7 +68,7 @@ namespace Refactor
                         var f = customers.Where(z => z.Name == c && z.Approved).ToList();
                         for (int j = 0; j < f.Count; j++)
                         {
-                            Console.WriteLine("ID: " + f[j].Id + " AMT: " + f[j].Amount);
+                            Console.WriteLine("ID: " + f[j].Id + " Amount: " + f[j].Amount);
                         }
                         break;
 
