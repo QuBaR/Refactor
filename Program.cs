@@ -14,7 +14,8 @@ namespace Refactor
         static void Main(string[] args)
         {
             string choice = "";
-            while (choice != "4")
+            bool isActive = true;
+            while (isActive == true)
             {
                 Console.WriteLine("");
                 Console.WriteLine("-------------------\nWelcome to the CRM\n-------------------\n");
@@ -29,43 +30,43 @@ namespace Refactor
                 {
 
                     case "1":
-                        
-                     
 
-                            if (customers.Count > 0)
+
+
+                        if (customers.Count > 0)
+                        {
+                            var d = customers.Select(z => z.Name).Distinct().ToList();
+                            for (int j = 0; j < d.Count; j++)
                             {
-                                var d = customers.Select(z => z.Name).Distinct().ToList();
-                                for (int j = 0; j < d.Count; j++)
-                                {
-                                    Console.WriteLine(d[j]);
-                                }
+                                Console.WriteLine(d[j]);
                             }
-                        
+                        }
+
 
                         break;
 
                     case "2":
-                        
-                        
-                            if (customers.Count > 0)
+
+
+                        if (customers.Count > 0)
+                        {
+                            decimal s = 0;
+                            foreach (var i in customers)
                             {
-                                decimal s = 0;
-                                foreach (var i in customers)
+                                if (i.Approved)
                                 {
-                                    if (i.Approved)
-                                    {
-                                        s = s + i.Amount;
-                                    }
+                                    s = s + i.Amount;
                                 }
-                                Console.WriteLine("Sum of approved order: " + s);
                             }
-                        
+                            Console.WriteLine("Sum of approved order: " + s);
+                        }
+
                         break;
 
                     case "3":
                         Console.WriteLine("Enter customer");
                         var c = Console.ReadLine()?.ToLower() ?? string.Empty;
-                        var f = customers.Where(z => z.Name.ToLower() == c && z.Approved == true).ToList();                        for (int j = 0; j < f.Count; j++)
+                        var f = customers.Where(z => z.Name.ToLower() == c && z.Approved == true).ToList(); for (int j = 0; j < f.Count; j++)
                         {
                             Console.WriteLine("ID: " + f[j].Id + " Amount: " + f[j].Amount);
                         }
@@ -73,7 +74,7 @@ namespace Refactor
 
                     case "4":
                         Console.WriteLine("Tack för att du använde programet");
-                           
+                        isActive = false;
                         break;
 
                     default:
