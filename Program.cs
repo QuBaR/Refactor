@@ -72,7 +72,7 @@ namespace Refactor
                         break;
 
                     case "4":
-                        Console.WriteLine("Tack för att du använde programet");
+                        Console.WriteLine("Thank you for choosing this program");
                            
                         break;
 
