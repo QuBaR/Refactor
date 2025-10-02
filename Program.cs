@@ -14,7 +14,7 @@ namespace Refactor
         static void Main(string[] args)
         {
             string choice = "";
-            while (choice != "3")
+            while (choice != "4")
             {
                 Console.WriteLine("");
                 Console.WriteLine("-------------------\nWelcome to the CRM\n-------------------\n");
