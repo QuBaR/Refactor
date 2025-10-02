@@ -28,7 +28,7 @@ namespace Refactor
                 switch (x)
                 {
 
-                    case "0":
+                    case "1":
                         if (customers != null)
                         {
                             if (customers.Count > 0)
@@ -42,7 +42,7 @@ namespace Refactor
                         }
                         break;
 
-                    case "1":
+                    case "2":
                         if (customers != null)
                         {
                             if (customers.Count > 0)
@@ -60,7 +60,7 @@ namespace Refactor
                         }
                         break;
 
-                    case "2":
+                    case "3":
                         Console.WriteLine("Enter customer");
                         var c = Console.ReadLine();
                         var f = customers.Where(z => z.cust == c && z.sts == 1).ToList();
@@ -70,7 +70,7 @@ namespace Refactor
                         }
                         break;
 
-                    case "3":
+                    case "4":
                         Console.WriteLine("bye");
                         break;
 
