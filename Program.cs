@@ -29,8 +29,8 @@ namespace Refactor
                 {
 
                     case "1":
-                        if (customers != null)
-                        {
+                        
+                     
 
                             if (customers.Count > 0)
                             {
@@ -40,13 +40,13 @@ namespace Refactor
                                     Console.WriteLine(d[j]);
                                 }
                             }
-                        }
+                        
 
                         break;
 
                     case "2":
-                        if (customers != null)
-                        {
+                        
+                        
                             if (customers.Count > 0)
                             {
                                 decimal s = 0;
@@ -59,7 +59,7 @@ namespace Refactor
                                 }
                                 Console.WriteLine("Sum of approved order: " + s);
                             }
-                        }
+                        
                         break;
 
                     case "3":
