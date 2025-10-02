@@ -77,7 +77,7 @@ namespace Refactor
                         break;
 
                     default:
-                        Console.WriteLine("Ogiltigt val, försök igen");
+                        Console.WriteLine("Wrong choice, try again");
                         break;
                 }
             }
