@@ -64,9 +64,8 @@ namespace Refactor
 
                     case "3":
                         Console.WriteLine("Enter customer");
-                        var c = Console.ReadLine();
-                        var f = customers.Where(z => z.Name == c && z.Approved).ToList();
-                        for (int j = 0; j < f.Count; j++)
+                        var c = Console.ReadLine()?.ToLower() ?? string.Empty;
+                        var f = customers.Where(z => z.Name.ToLower() == c && z.Approved == true).ToList();                        for (int j = 0; j < f.Count; j++)
                         {
                             Console.WriteLine("ID: " + f[j].Id + " Amount: " + f[j].Amount);
                         }
