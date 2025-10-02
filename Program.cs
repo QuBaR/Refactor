@@ -49,15 +49,15 @@ namespace Refactor
                         
                             if (customers.Count > 0)
                             {
-                                decimal summera = 0;
+                                decimal sum = 0;
                                 foreach (var i in customers)
                                 {
                                     if (i.Approved)
                                     {
-                                        summera = summera + i.Amount;
+                                        sum = sum + i.Amount;
                                     }
                                 }
-                                Console.WriteLine("Sum of approved order: " + summera);
+                                Console.WriteLine("Sum of approved order: " + sum);
                             }
                         
                         break;
