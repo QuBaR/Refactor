@@ -1,6 +1,6 @@
 ﻿namespace Refactor.Models
 {
-    public class Objekt
+    public class Customers
     {
         public int id { get; set; }
         public int sts { get; set; }

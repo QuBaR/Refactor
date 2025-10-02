@@ -4,11 +4,11 @@ namespace Refactor
 {
     class Program
     {
-        static List<Objekt> list1 = new List<Objekt>
+        static List<Customers> customers = new List<Customers>
         {
-            new Objekt { id=1, sts=1, amt=99.99m, cust="A" },
-            new Objekt { id=2, sts=0, amt=49.50m, cust="B" },
-            new Objekt { id=3, sts=1, amt=10m,   cust="B" }
+            new Customers { id=1, sts=1, amt=99.99m, cust="A" },
+            new Customers { id=2, sts=0, amt=49.50m, cust="B" },
+            new Customers { id=3, sts=1, amt=10m,   cust="B" }
         };
 
         static void Main(string[] args)
@@ -27,11 +27,11 @@ namespace Refactor
 
                 if (x == "0")
                 {
-                    if (list1 != null)
+                    if (customers != null)
                     {
-                        if (list1.Count > 0)
+                        if (customers.Count > 0)
                         {
-                            var d = list1.Select(z => z.cust).Distinct().ToList();
+                            var d = customers.Select(z => z.cust).Distinct().ToList();
                             for (int j = 0; j < d.Count; j++)
                             {
                                 Console.WriteLine(d[j]);
@@ -41,12 +41,12 @@ namespace Refactor
                 }
                 else if (x == "1")
                 {
-                    if (list1 != null)
+                    if (customers != null)
                     {
-                        if (list1.Count > 0)
+                        if (customers.Count > 0)
                         {
                             decimal s = 0;
-                            foreach (var i in list1)
+                            foreach (var i in customers)
                             {
                                 if (i.sts == 1) // 1 = approved
                                 {
@@ -61,7 +61,7 @@ namespace Refactor
                 {
                     Console.WriteLine("Enter customer");
                     var c = Console.ReadLine();
-                    var f = list1.Where(z => z.cust == c && z.sts == 1).ToList();
+                    var f = customers.Where(z => z.cust == c && z.sts == 1).ToList();
                     for (int j = 0; j < f.Count; j++)
                     {
                         Console.WriteLine("ID: " + f[j].id + " AMT: " + f[j].amt);
