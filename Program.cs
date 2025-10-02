@@ -53,10 +53,15 @@ namespace Refactor
                             decimal s = 0;
                             foreach (var i in customers)
                             {
-                                if (i.Approved)
+                                decimal sum = 0;
+                                foreach (var i in customers)
                                 {
-                                    s = s + i.Amount;
+                                    if (i.Approved)
+                                    {
+                                        sum = sum + i.Amount;
+                                    }
                                 }
+                                Console.WriteLine("Sum of approved order: " + sum);
                             }
                             Console.WriteLine("Sum of approved order: " + s);
                         }
